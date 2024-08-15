@@ -41,14 +41,18 @@ public class AutorService {
             if(opAutor.isPresent()){
                 return opAutor.get();
             }
+            return null;
         }
         public List<Autor> getAllAutor(){
             return autorRepository.findAll();
         }
         public List<Autor> findByIdade(Short idade){
-            
+            return autorRepository.findByIdade(idade);
         }
-    //     public List<Autor> findByIdade(Short idade);
-    // public Autor findByCPF(String cpf);
-    // public Autor findByNome(String nome);
+        public Autor findByCPF(String cpf){
+            return autorRepository.findByCPF(cpf);
+        }
+        public Autor findByNome(String nome){
+            return autorRepository.findByNome(nome);
+        }
 }
