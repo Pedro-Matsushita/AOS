@@ -1,4 +1,4 @@
-package com.aos.aula01.demo.Service;
+package com.aos.aula01.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

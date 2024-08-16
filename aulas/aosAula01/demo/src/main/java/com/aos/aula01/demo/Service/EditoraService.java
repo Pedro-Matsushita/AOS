@@ -1,4 +1,4 @@
-package com.aos.aula01.demo.Service;
+package com.aos.aula01.demo.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.aos.aula01.demo.model.Autor;
 import com.aos.aula01.demo.model.Editora;
 import com.aos.aula01.demo.repository.EditoraRepository;
 
@@ -47,16 +46,13 @@ public class EditoraService {
             return editoraRepository.findAll();
         }
         public void deleteByCNPJ(String cnpj){
-            Optional<Editora> opEditora = editoraRepository.findByCNPJ(cnpj);
-            if(opEditora.isPresent()){
-                editoraRepository.deleteByCNPJ(cnpj);
-            }
+                Optional<Editora> opEditora = editoraRepository.findByCNPJ(cnpj);
+                if(opEditora.isPresent()){
+                    editoraRepository.deleteByCNPJ(cnpj);
+                }
         }
-        public void findByNome(String nome){
-            Optional<Editora> opEditora = editoraRepository.findByNome(nome);
-            if(opEditora.isPresent()){
-                System.out.println(opEditora.get());
-            }
+        public Editora findByNome(String nome){
+            return editoraRepository.findByNome(nome);
         }
         public void deleteByNome(String nome){
             editoraRepository.deleteByNome(nome);

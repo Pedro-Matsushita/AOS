@@ -1,4 +1,4 @@
-package com.aos.aula01.demo.Service;
+package com.aos.aula01.demo.service;
 
 import java.util.List;
 import java.util.Optional;
