@@ -35,5 +35,4 @@ public class AutorController{
     public Autor findByCPF(@PathVariable String cpf){
         return autorService.findByCPF(cpf);
     }
-    
 }
